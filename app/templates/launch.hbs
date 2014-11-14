@@ -1,0 +1,5 @@
+<h2>Sign in to {{name}}</h2>
+<h4>In attendance: {{count}} participants</h4>
+{{input type="number" value=memberId}}
+<button {{action 'submit'}}>Come thru</button>
+{{#link-to 'dashboard' session.currID}}Back to dashboard{{/link-to}}

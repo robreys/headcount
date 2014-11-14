@@ -1,0 +1,45 @@
+<h2>Hello Mr.{{name}}</h2>
+<h4>Here are your most recent events:</h4>
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Date</td>
+			<td>Location</td>
+			<td>Count</td>
+			<td>&nbsp;</td>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each recentEvents}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{date}}</td>
+				<td>{{location}}</td>
+				<td>{{count}}</td>
+				<td>{{#link-to 'event' this}}Stats{{/link-to}}</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+<h4>Here are your top members:</h4>
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Class</td>
+			<td>Major</td>
+		<tr>
+	</thead>
+	<tbody>
+		{{#each topMembers}}
+			<tr>
+				<td>{{name}}</td>
+				<td>{{email}}</td>
+				<td>{{class}}</td>
+				<td>{{major}}</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
