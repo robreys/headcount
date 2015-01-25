@@ -1,7 +1,16 @@
-<h2>Welcome to {{name}}</h2>
-List of Participants:
-{{#each participants}}
-	<li>{{name}}</li>
-{{/each}}
-{{#link-to 'launch' this}}Launch Event{{/link-to}}
+<h2>Event Statistics: {{name}}</h2>
+Date & Time: {{format-date date}} {{format-time date}}<br>
+Location: {{location}}<br>
+Headcount: {{count}}<br>
+{{#if participants}}
+	List of Participants:
+	<ul>
+		{{#each participants}}
+			<li>{{fullName}}</li>
+		{{/each}}
+	</ul>
+{{else}}
+	This event does not have any participants.<br>
+{{/if}}
+{{#link-to 'launch' this}}Launch Event{{/link-to}}<br>
 {{#link-to 'dashboard' session.currID}}Back to dashboard{{/link-to}}

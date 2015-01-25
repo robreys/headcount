@@ -1,45 +1,58 @@
-<h2>Hello Mr.{{name}}</h2>
-<h4>Here are your most recent events:</h4>
-<table>
-	<thead>
-		<tr>
-			<td>Name</td>
-			<td>Date</td>
-			<td>Location</td>
-			<td>Count</td>
-			<td>&nbsp;</td>
-		</tr>
-	</thead>
-	<tbody>
-		{{#each recentEvents}}
+<h2>Hello {{fullName}}</h2>
+{{#if recentEvents}}
+	<h4>Here are your most recent events:</h4>
+	<table>
+		<thead>
 			<tr>
-				<td>{{name}}</td>
-				<td>{{date}}</td>
-				<td>{{location}}</td>
-				<td>{{count}}</td>
-				<td>{{#link-to 'event' this}}Stats{{/link-to}}</td>
+				<td>Name</td>
+				<td>Date</td>
+				<td>Time</td>
+				<td>Location</td>
+				<td>Count</td>
+				<td>&nbsp;</td>
 			</tr>
-		{{/each}}
-	</tbody>
-</table>
-<h4>Here are your top members:</h4>
-<table>
-	<thead>
-		<tr>
-			<td>Name</td>
-			<td>Email</td>
-			<td>Class</td>
-			<td>Major</td>
-		<tr>
-	</thead>
-	<tbody>
-		{{#each topMembers}}
+		</thead>
+		<tbody>
+			{{#each recentEvents}}
+				<tr>
+					<td>{{name}}</td>
+					<td>{{format-date date}}</td>
+					<td>{{format-time date}}</td>
+					<td>{{location}}</td>
+					<td>{{count}}</td>
+					<td>{{#link-to 'event' this}}Stats{{/link-to}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+{{else}}
+	You have not created an event. <br>
+{{/if}}
+<button {{action 'createEvent'}}>Create Event</button> <br>
+{{#if topMembers}}
+	<h4>Here are your top members:</h4>
+	<table>
+		<thead>
 			<tr>
-				<td>{{name}}</td>
-				<td>{{email}}</td>
-				<td>{{class}}</td>
-				<td>{{major}}</td>
-			</tr>
-		{{/each}}
-	</tbody>
-</table>
+				<td>Name</td>
+				<td>Email</td>
+				<td>Class</td>
+				<td>Major</td>
+				<td>Score</td>
+			<tr>
+		</thead>
+		<tbody>
+			{{#each topMembers}}
+				<tr>
+					<td>{{fullName}}</td>
+					<td>{{email}}</td>
+					<td>{{class}}</td>
+					<td>{{major}}</td>
+					<td>{{score}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+{{else}}
+	You do not have any registered members <br>
+{{/if}}

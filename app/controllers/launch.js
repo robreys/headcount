@@ -2,34 +2,22 @@ import Ember from "ember";
 
 export default Ember.ObjectController.extend({
 	actions: {
-		//checks if registered member, transitions to registration if not
-		//if registered, increments count
+		//primary sign-in action
 		submit: function() {
 			var self = this;
-			var count = this.incrementProperty('count');
-			var memId = this.get('memberId');
-			var store = this.store;
-			var currId = this.session.currID;
-			var member = null;
-			Ember.$.get("http://localhost:4200/api/available/" + memId).then(function(resp) {
+			//verifies if member is registered user
+			Ember.$.get("/api/available/" + self.get('memberId')).then(function(resp) {
+				self.incrementProperty('count');
+				//renders member registration modal if not registered
 				if (resp.available === 'yes') {
-					member = store.createRecord('member', {
-						id: memId,
-						name: "Member" + count
-					});
-					store.find('user', currId).then(function(user) {
-						member.set('admin', user);
-					});
-					alert("hello " + member.get('name'));
+					return self.send('openModal', ['member-registration', self.get('model')]);
 				}
 				else {
-					member = store.find('member', memId).then(function(mem) {
-						alert('hello again ' + mem.get('name'));
+					self.store.find('member', self.get('memberId')).then(function(mem) {
+						self.get('participants').pushObject(mem);
+						alert('Hello again ' + mem.get('fullName') + '!');
 					});
 				}
-				self.get('participants').then(function(part) {
-					return part.pushObject(member);
-				});
 			});
 		}
 	}

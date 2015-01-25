@@ -6,6 +6,9 @@ export default Ember.ObjectController.extend({
 	actions: {
 		login: function() {
 			this.transitionToRoute('dashboard', 0);
+		},
+		register: function() {
+			return this.send('openModal', ['user-registration', this.get('model')]);
 		}
 	}
 });
