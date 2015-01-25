@@ -18,6 +18,7 @@ export default Ember.ObjectController.extend({
 					firstName: this.get('userFName'),
 					lastName: this.get('userLName'),
 				});
+
 				//need to notify user of account creation
 				//alert("Successfully registered. Welcome " + user.get('fullName') + "!");
 				//clean up
