@@ -1,8 +1,15 @@
-<div class="login">
-		<form>
-		{{input type="text" placeholder="placeholder" name="user"}}<br>
-		{{input type="password" placeholder="placeholder" name="password"}}<br>
-		<button {{action 'register'}}>Register</button>
-		<button {{action 'login'}}>Login</button>
-	</form>
-</div>
+
+
+  <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>HeadCount</div>
+		</div>
+		<br>
+		<div class="login">
+		
+				{{input type="text" placeholder="email" name="user"}}<br>
+				{{input type="password" placeholder="password" name="password"}}<br>
+				<input type="button" {{action 'login'}} value="Login">
+				<input type="button" {{action 'register'}}value="Register">
+		</div>
