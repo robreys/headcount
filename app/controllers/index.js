@@ -6,7 +6,7 @@ export default Ember.ObjectController.extend({
 	register: false,
 	actions: {
 		login: function() {
-			this.transitionToRoute('dashboard', 0);
+			this.transitionToRoute('dashboard.events', 0);
 		},
 		register: function() {
 			if (!this.get('register'))
@@ -16,14 +16,14 @@ export default Ember.ObjectController.extend({
 					//we want to query the server here to determine next available id
 					id: Math.floor(Math.random()*101),
 					firstName: this.get('userFName'),
-					lastName: this.get('userLName'),
+					lastName: this.get('userLName')
 				});
 
 				//need to notify user of account creation
 				//alert("Successfully registered. Welcome " + user.get('fullName') + "!");
 				//clean up
 				this.set('userFName', '').set('userLName', '');
-	      this.transitionToRoute('dashboard/createEvent', user.get('id'));				
+	      this.transitionToRoute('dashboard.events', user.get('id'));				
 			}
 			//return this.send('openModal', ['user-registration', this.get('model')]);
 		}
