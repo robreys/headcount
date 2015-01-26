@@ -6,7 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.resource('dashboard', {path: 'dash/:id'});
+	this.resource('dashboard', {path: 'dash/:id', function(
+						this.route('events');
+						this.route('createEvent');
+						)
 	this.resource('event', {path: 'event/:id'});
 	this.resource('launch', {path: 'event/launch/:id'});
 });

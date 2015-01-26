@@ -1,0 +1,38 @@
+  
+            <!--      Wizard container        -->   
+            <div class="wizard-container" style="position: relative;"> 
+                <form action="" method="">
+                <div class="card wizard-card ct-wizard-green" style="background-color: #FFFFFF;" id="wizard">
+                
+                
+                    	<div class="wizard-header">
+                    	{{#if recentEvents}}
+                    	<h3>
+                        	   Hello <b>{{fullName}}</b>! <br>
+                        	   <small>Events Displayed Below!</small>
+                        	</h3>
+                    	{{else}}
+                        	<h3>
+                        	   Hello <b>{{fullName}}</b>! <br>
+                        	   <small>You have not created an event.</small>
+                        	</h3>
+                        {{/if}}
+
+
+                    	</div> <!-- Wizard header -->
+                    	
+                 
+                        <div class="wizard-footer" style="position: absolute; bottom: 0; width:100% margin-bottom: 10px;" >
+                              <div  style="text-align: center; ">
+                                    
+                                    <input type='button' class='btn btn-fill btn-info btn-wd btn-sm'  value='Next' />
+        
+                                </div>
+                                
+                                
+                        </div> 
+                </div>
+
+                </form>
+
+            </div> <!-- wizard container -->

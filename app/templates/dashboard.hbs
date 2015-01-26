@@ -1,4 +1,103 @@
-<h2>Hello {{fullName}}</h2>
+
+
+
+
+  <div class="body"></div>
+		
+    <div class="grad"></div>
+		
+		<div id="navbar-full">
+   		 <div id="navbar">
+        <nav class="navbar navbar-ct-blue navbar-fixed-top navbar-transparent" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+            	
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand navbar-brand-logo" href="">
+                    
+                    <img src="https://40.media.tumblr.com/493dc3edbb5821acc46dd2f2152fb2b2/tumblr_nirdxkEBEm1u9phyeo1_400.png" style="margin-left: 10px;"width="100px">
+                    
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right"> 
+                    <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-user" style="font-size: 25px;"></span>
+                                <p>{{fullName}}</p>
+                            </a>
+                          <ul class="dropdown-menu">
+                            
+                            <li><a href="#" style="text-align: center;">Logout</a></li>
+                          </ul>
+                    </li>
+               </ul>
+              
+              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+</div> 
+
+ <!--   Big container   -->
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+           
+            <!--      Wizard container        -->   
+            <div class="wizard-container" style="position: relative;"> 
+                <form action="" method="">
+                <div class="card wizard-card ct-wizard-green" style="background-color: #FFFFFF;" id="wizard">
+                
+                
+                    	<div class="wizard-header">
+                    	{{#if recentEvents}}
+                    	<h3>
+                        	   Hello <b>{{fullName}}</b>! <br>
+                        	   <small>Events Displayed Below!</small>
+                        	</h3>
+                    	{{else}}
+                        	<h3>
+                        	   Hello <b>{{fullName}}</b>! <br>
+                        	   <small>You have not created an event.</small>
+                        	</h3>
+                        {{/if}}
+
+
+                    	</div> <!-- Wizard header -->
+                    	
+                 
+                        <div class="wizard-footer" style="position: absolute; bottom: 0; width:100% margin-bottom: 10px;" >
+                              <div  style="text-align: center; ">
+                                    
+                                    <input type='button' class='btn btn-fill btn-info btn-wd btn-sm'  value='Next' />
+        
+                                </div>
+                                
+                                
+                        </div> 
+                </div>
+
+                </form>
+
+            </div> <!-- wizard container -->
+        </div>
+        </div> <!-- row -->
+    </div> <!--  big container -->
+
+
+		
+
+{{!-- 
+
 {{#if recentEvents}}
 	<h4>Here are your most recent events:</h4>
 	<table>
@@ -56,3 +155,7 @@
 {{else}}
 	You do not have any registered members <br>
 {{/if}}
+
+--}}
+
+		

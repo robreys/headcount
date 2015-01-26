@@ -2,6 +2,7 @@
 
   <div class="body"></div>
 		<div class="grad"></div>
+		
 		<div class="header">
 			{{#unless register}}
 			<img src="https://40.media.tumblr.com/493dc3edbb5821acc46dd2f2152fb2b2/tumblr_nirdxkEBEm1u9phyeo1_400.png" width="200px">
@@ -10,6 +11,8 @@
 			{{/unless}}
 		</div>
 		<br>
+		
+		
 		<div class="login">
 				{{input type="text" placeholder="email" name="user"}}<br>
 				{{input type="password" placeholder="password" name="password"}}<br>
@@ -23,3 +26,4 @@
 				<input type="button" {{action 'register'}}value="Submit" onclick="checkForm(this)">
 				{{/unless}}
 		</div>
+	

@@ -23,7 +23,7 @@ export default Ember.ObjectController.extend({
 				//alert("Successfully registered. Welcome " + user.get('fullName') + "!");
 				//clean up
 				this.set('userFName', '').set('userLName', '');
-	      this.transitionToRoute('dashboard', user.get('id'));				
+	      this.transitionToRoute('dashboard/createEvent', user.get('id'));				
 			}
 			//return this.send('openModal', ['user-registration', this.get('model')]);
 		}
