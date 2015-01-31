@@ -6,8 +6,8 @@ module.exports = function(app) {
     	"user": 
 		    {
 		    	"id": "0",
-		  		"firstName": 'Swag',
-		  		"lastName": 'Lorde',
+		  		"first_name": 'Swag',
+		  		"last_name": 'Lorde',
 		  		"recentEvents": ["0", "1"],
 		  		"topMembers": ["0", "1"]
 	    	},
@@ -34,16 +34,16 @@ module.exports = function(app) {
     	"member": [
 				{
 					"id": "0",
-					"firstName": 'Baby',
-					"lastName": 'Swag',
+					"first_name": 'Baby',
+					"last_name": 'Swag',
 					"email": 'bab@swag.com',
 					"major": 'Swag Engineering',
 					"class": 'Swag Senior'
 				},
 				{
 					"id": "1",
-					"firstName": 'Swag',
-					"lastName": 'Jr',
+					"first_name": 'Swag',
+					"last_name": 'Jr',
 					"email": 'jr@swag.com',
 					"major": 'Swag Engineering',
 					"class": 'Swag Senior'
