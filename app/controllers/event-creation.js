@@ -20,9 +20,6 @@ export default Ember.ObjectController.extend({
 			this.set('eventId', null).set('eventName', null).set('eventDate', null)
 				.set('eventTime', null).set('eventLocation', null);  	
       return this.send('closeModal');
-    },
-    close: function() {
-      return this.send('closeModal');
     }
   }	
 });
