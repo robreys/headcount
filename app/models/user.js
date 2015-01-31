@@ -1,11 +1,10 @@
 import DS from "ember-data";
 
 export default DS.Model.extend({
-	firstName: DS.attr('string'),
-	lastName: DS.attr('string'),
+	first_name: DS.attr('string'),
+	last_name: DS.attr('string'),
 	fullName: function() {
-		return this.get('firstName') + ' ' + this.get('lastName');
-	}.property('firstName', 'lastName'),
-	recentEvents: DS.hasMany('event'),
-	topMembers: DS.hasMany('member')
+		return this.get('first_name') + ' ' + this.get('last_name');
+	}.property('first_name', 'last_name'),
+	groups: DS.hasMany('group')
 });
