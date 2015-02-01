@@ -1,7 +1,101 @@
-<form>
-	Event Name: {{input value=eventName}} <br>
-	Event Date: {{input value=eventDate placeholder="MM/DD/YYYY"}} <br>
-	Event Time: {{input value=eventTime placeholder="00:00 AM"}} <br>
-	Location: {{input value=eventLocation}} <br>
-	<button {{action "submit"}}>Submit</button>
-</form>
+<form action="" method="">
+               
+                
+                    	<div class="wizard-header">
+                        	<h3>
+                        	   <b>Create</b>Your Event <br>
+                        	   <small>You can later launch the event to sign members in!</small>
+                        	</h3>
+                    	</div>
+
+						
+                    	<ul class="nav nav-pills">
+                            <li style="width: 33.3333333333333%;"><a href="#basics" data-toggle="tab">Basics</a></li>
+                            <li style="width: 33.3333333333333%;"><a href="#time" data-toggle="tab">Duration</a></li>
+                            <li style="width: 33.3333333333333%;"><a href="#description" data-toggle="tab">Description</a></li>
+                            
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane" id="basics">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                    <h4 class="info-text"> Let's start with the basic details</h4>
+                                  </div>
+                                  <div class="col-sm-5 col-sm-offset-1">
+                                      <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" id="event_name" placeholder="What is the name of the event you are creating?">
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-5">
+                                    <div class="form-group">
+                                        <label>Location</label>
+                                        <input type="text" class="form-control" id="event_location" placeholder="Where are you planning to have your event at?">
+                                      </div>
+
+                                  </div>
+                                  
+                            
+                              </div>
+                            </div>
+                            <div class="tab-pane" id="time">
+                                <h4 class="info-text">What time will your event start and end? </h4>
+                                <div class="row">
+                                    <div class="col-sm-10 col-sm-offset-1">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                          <div class='col-sm-6'>
+                                          <input type='text' class="form-control" id='datetimepicker4'/>
+                                          </div>
+                                          <script type="text/javascript">
+                                               $(function () {
+                                              $('#datetimepicker4').datetimepicker();
+                                              });
+                                          </script>
+                                            <!-- ADD START AND END DATES HERE -->
+
+                                        </div>
+
+                                        <div class="col-sm-4">
+
+                                            <!-- ADD START AND END DATES HERE -->
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                          
+                         
+                            <div class="tab-pane" id="description">
+                                <div class="row">
+                                    <h4 class="info-text"> Give your event a small description. </h4>
+                                    <div class="col-sm-6 col-sm-offset-1">
+                                         <div class="form-group">
+                                            <label>Place description</label>
+                                            <textarea class="form-control" placeholder="" rows="9">
+                                                
+                                            </textarea>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                         <div class="form-group">
+                                            <label>Example</label>
+                                            <p class="description">"We will be having a Grad School info panel so come and learn more if your are interested in Graduate school."</p>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard-footer">
+                            	<div class="pull-right">
+                                    <input type='button' class='btn btn-next btn-fill btn-success btn-wd btn-sm' name='next' value='Next' />
+                                    <input type='button' class='btn btn-finish btn-fill btn-success btn-wd btn-sm' name='finish' value='Finish' />
+        
+                                </div>
+                                <div class="pull-left">
+                                    <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                                </div>
+                                <div class="clearfix"></div>
+                        </div>	
+         
+                </form>

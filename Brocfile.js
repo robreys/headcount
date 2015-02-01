@@ -38,4 +38,7 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
+app.import('bower_components/twitter-bootstrap-wizard/jquery.bootstrap.wizard.js');
+app.import('vendor/wizard.js');
+
 module.exports = app.toTree();
