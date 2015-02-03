@@ -9,9 +9,9 @@ export default Ember.ObjectController.extend({
 			this.transitionToRoute('dashboard.events', 0);
 		},
 		register: function() {
-			if (!this.get('register'))
+			if (!this.get('register')){
 				this.set('register', true);
-			else {
+			}else {
 				var user = this.store.createRecord('user', {
 					//we want to query the server here to determine next available id
 					id: Math.floor(Math.random()*101),
